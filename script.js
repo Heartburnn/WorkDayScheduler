@@ -1,7 +1,5 @@
-$currentTime = moment().format('dddd, MMMM Do, YYYY')
-$('#currentDay').text($currentTime)
 
-
+//checks time and adds class to appropiate times
 function checkTime(current){
   $timeCheck = moment().format('HH')
   if(current == $timeCheck){
@@ -13,6 +11,7 @@ function checkTime(current){
   }
 }
 
+//function to save text input to local storage
 function save(){
   $(".saveBtn").click(function(){
     var id = $(this).data("id")
@@ -21,7 +20,11 @@ function save(){
   })  
 }
 
+//calls all timeblock function to screate schedule
 function getSchedule(){
+ $currentTime = moment().format('dddd, MMMM Do, YYYY')
+ $('lead').append($currentTime);
+ console.log($currentTime);
  nineAM();
  tenAM();
  elevenAM();
@@ -36,12 +39,12 @@ function getSchedule(){
 
 
 function nineAM(){
-   $9am = $(`<div class= "row col-8">`)
+   $9am = $(`<div class= "row col-12">`)
   $hour = $(`<div class = "hour time-block col-1"></div>`)
   $hour.text("9am")
   $text = $(`<textarea class = "col hour" id='inputText${9}' type='text' name='userInput'></textarea>`)
   $text.text(localStorage.getItem(9))
-  $button = $(`<button class = "saveBtn col-1 col-m-2 fas fa-save" data-id='${9}'></button>`)
+  $button = $(`<button class = "saveBtn col-1 col-m-1 fas fa-save" data-id='${9}'></button>`)
       
   $('.9am').append($9am)
   $($9am).append($hour)
@@ -53,7 +56,7 @@ function nineAM(){
 }
 
 function tenAM(){
- $10am = $(`<div class= "row col-8">`)
+ $10am = $(`<div class= "row col-12">`)
  $hour = $(`<div class = "hour time-block col-1"></div>`)
  $hour.text("10am")
  $text = $(`<textarea class = "col hour" id='inputText${10}' type='text' name='userInput'></textarea>`)
@@ -70,7 +73,7 @@ function tenAM(){
 }
 
 function elevenAM(){
- $11am = $(`<div class= "row col-8">`)
+ $11am = $(`<div class= "row col-12">`)
  $hour = $(`<div class = "hour time-block col-1"></div>`)
  $hour.text("11am")
  $text = $(`<textarea class = "col hour" id='inputText${11}' type='text' name='userInput'></textarea>`)
@@ -87,7 +90,7 @@ function elevenAM(){
 }
 
 function twelvePM(){
- $12pm = $(`<div class= "row col-8">`)
+ $12pm = $(`<div class= "row col-12">`)
  $hour = $(`<div class = "hour time-block col-1"></div>`)
  $hour.text("12pm")
  $text = $(`<textarea class = "col hour" id='inputText${12}' type='text' name='userInput'></textarea>`)
@@ -104,7 +107,7 @@ function twelvePM(){
 }
 
 function onePM(){
-  $1pm = $(`<div class= "row col-8">`)
+  $1pm = $(`<div class= "row col-12">`)
  $hour = $(`<div class = "hour time-block col-1"></div>`)
  $hour.text("1pm")
  $text = $(`<textarea class = "col hour" id='inputText${1}' type='text' name='userInput'></textarea>`)
@@ -121,7 +124,7 @@ function onePM(){
 }
 
 function twoPM(){
- $2pm = $(`<div class= "row col-8">`)
+ $2pm = $(`<div class= "row col-12">`)
  $hour = $(`<div class = "hour time-block col-1"></div>`)
  $hour.text("2pm")
  $text = $(`<textarea class = "col hour" id='inputText${2}' type='text' name='userInput'></textarea>`)
@@ -138,7 +141,7 @@ function twoPM(){
 }
 
 function threePM(){
-  $3pm = $(`<div class= "row col-8">`)
+  $3pm = $(`<div class= "row col-12>`)
  $hour = $(`<div class = "hour time-block col-1"></div>`)
  $hour.text("3pm")
  $text = $(`<textarea class = "col hour" id='inputText${3}' type='text' name='userInput'></textarea>`)
@@ -155,7 +158,7 @@ function threePM(){
 }
 
 function fourPM(){
-  $4pm = $(`<div class= "row col-8">`)
+  $4pm = $(`<div class= "row col-12">`)
  $hour = $(`<div class = "hour time-block col-1"></div>`)
  $hour.text("4pm")
  $text = $(`<textarea class = "col hour" id='inputText${4}' type='text' name='userInput'></textarea>`)
@@ -172,7 +175,7 @@ function fourPM(){
 }
 
 function fivePM(){
- $5pm = $(`<div class= "row col-8">`)
+ $5pm = $(`<div class= "row col-12">`)
  $hour = $(`<div class = "hour time-block col-1"></div>`)
  $hour.text("5pm")
  $text = $(`<textarea class = "col hour" id='inputText${5}' type='text' name='userInput'></textarea>`)
@@ -188,5 +191,5 @@ function fivePM(){
  save();
 }
 
-
+//runs maim function
 getSchedule();
