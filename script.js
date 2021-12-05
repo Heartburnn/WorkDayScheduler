@@ -116,7 +116,7 @@ function onePM(){
  $($1pm).append($text)
  $($1pm).append($button)
      
- checkTime(1)
+ checkTime(13)
  save();
 }
 
@@ -133,7 +133,7 @@ function twoPM(){
  $($2pm).append($text)
  $($2pm).append($button)
      
- checkTime(2)
+ checkTime(14)
  save();
 }
 
@@ -150,7 +150,7 @@ function threePM(){
  $($3pm).append($text)
  $($3pm).append($button)
      
- checkTime(3)
+ checkTime(15)
  save();
 }
 
@@ -167,7 +167,7 @@ function fourPM(){
  $($4pm).append($text)
  $($4pm).append($button)
      
- checkTime(9)
+ checkTime(16)
  save();
 }
 
@@ -184,7 +184,7 @@ function fivePM(){
  $($5pm ).append($text)
  $($5pm ).append($button)
      
- checkTime(5)
+ checkTime(17)
  save();
 }
 
